@@ -36,13 +36,23 @@ The arguments of the subroutines are:
 Subroutine GenRS1D( PNUM, SPNM, KiS, PrX, DtX, TCi, dmax, eta, ORD, WT, ZAY)
 
 PNUM: Number of particles used 
+
 SPNM: Number of the specific particle for which the shape function is being evaluated 
+
 KiS: location of the point in which shape function for particle(SPNM) is being evaluated
+
 PrX: (vector) coordinates of the particles
+
 DtX: (vector) length of the domin associated with each particle
+
 TCi: (vector) radius selected for each particle
+
 dmax: a scalling parameter. radius of each particleis multiplied by this number.
+
 eta: is the order of considered shape function. 0 is normal shape functions, 1 is the shape functions with first derivative included as shape function
+
 ORD: ORD is the order of reproduction. first or second order will be sufficient. Unless higher order of shape functions are requested. 
+
 WT: Window function Type
+
 Zay: (vector) shape functions (output)
