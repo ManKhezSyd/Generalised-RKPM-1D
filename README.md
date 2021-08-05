@@ -20,4 +20,29 @@ The generalised RKPM allows to include the derivatives of the field function in 
 
 Don’t hesitate to contact me if you require further information….
 
+mani.khezri.edu@gmail.com
+
 I will gradually upload 2D and 3D shape functions too. 
+
+There are three subroutines that should be called from the main program:
+
+1. GenRS1D      gives the value of the shape function for a specific particle at a specified location
+2. DGenRS1D     gives the value of the first derivative of the shape function for a specific particle at a specified location
+3. DDGenRS1D    gives the value of the second derivative of the shape function for a specific particle at a specified location
+
+
+The arguments of the subroutines are:
+
+Subroutine GenRS1D( PNUM, SPNM, KiS, PrX, DtX, TCi, dmax, eta, ORD, WT, ZAY)
+
+PNUM: Number of particles used 
+SPNM: Number of the specific particle for which the shape function is being evaluated 
+KiS: location of the point in which shape function for particle(SPNM) is being evaluated
+PrX: (vector) coordinates of the particles
+DtX: (vector) length of the domin associated with each particle
+TCi: (vector) radius selected for each particle
+dmax: a scalling parameter. radius of each particleis multiplied by this number.
+eta: is the order of considered shape function. 0 is normal shape functions, 1 is the shape functions with first derivative included as shape function
+ORD: ORD is the order of reproduction. first or second order will be sufficient. Unless higher order of shape functions are requested. 
+WT: Window function Type
+Zay: (vector) shape functions (output)
